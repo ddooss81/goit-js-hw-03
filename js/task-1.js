@@ -1,10 +1,20 @@
 'use strict';
 
-function checkStorage(storage, item) {return storage.includes(item.toLowerCase()) ? `${item.toLowerCase()} is available to order!` : "Sorry! We are out of stock!";}
+function createReversedArray(args) {
+    
+    args = Array.from(arguments);
+    //console.log(args.length)
+    let result = [];
+    //let i = args.length - 1;
+    for (let i = args.length - 1; i >= 0; i--) {
+        result.push(args[i]);
+    }
+        return result;
+  
+    }
 
-console.log(checkStorage(["apple", "plum", "pear"], "plum"));
-console.log(checkStorage(["apple", "plum", "pear"], "pLuM"));
-console.log(checkStorage(["apple", "plum", "pear"], "pear"));
-console.log(checkStorage(["apple", "plum", "pear"], "pEAr"));
-console.log(checkStorage(["apple", "plum", "pear"], "orange"));
-console.log(checkStorage(["apple", "plum", "pear"], "carrot"));
+
+console.log(createReversedArray(12, 85, 37, 4));
+console.log(createReversedArray(164, 48, 291));
+console.log(createReversedArray(412, 371, 94, 63, 176));
+console.log(createReversedArray());
