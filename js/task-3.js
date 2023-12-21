@@ -1,7 +1,7 @@
 'use strict';
 
 function filterArray(numbers, value) {
-    let finalArray = [];    
+    let finalArray = [];
     for (let i = 0; i < numbers.length; i++) {
         if (numbers[i] > value) {
             finalArray.push(numbers[i]);
